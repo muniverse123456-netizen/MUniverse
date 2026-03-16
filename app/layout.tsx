@@ -31,15 +31,15 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ClerkProvider
-  appearance={{
-    theme: dark,
-    elements: {
-  modalBackdrop: "fixed inset-0 grid place-items-center",
-  card: "max-w-md w-full",
-  modalContent: "items-center",
-}
-  }}
->
+          appearance={{
+            theme: dark,
+            elements: {
+              modalBackdrop: "fixed inset-0 grid place-items-center",
+              card: "max-w-md w-full",
+              modalContent: "items-center",
+            }
+          }}
+        >
           <ConvexClientProvider>
             <SyncUser />
             <Header />

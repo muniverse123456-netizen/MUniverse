@@ -11,14 +11,14 @@ import { useConvexAuth } from "convex/react";
  * Must be rendered inside <ConvexProviderWithClerk>.
  */
 export default function SyncUser() {
-  const { isAuthenticated } = useConvexAuth();
-  const upsertUser = useMutation(api.users.upsertUser);
+    const { isAuthenticated } = useConvexAuth();
+    const upsertUser = useMutation(api.users.upsertUser);
 
-  useEffect(() => {
-    if (isAuthenticated) {
-      upsertUser();
-    }
-  }, [isAuthenticated, upsertUser]);
+    useEffect(() => {
+        if (isAuthenticated) {
+            upsertUser();
+        }
+    }, [isAuthenticated, upsertUser]);
 
-  return null;
+    return null;
 }
